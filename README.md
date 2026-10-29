@@ -52,8 +52,8 @@ Before building the project, ensure your development environment meets the follo
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/vinterely/glory-samp-android.git
-cd glory-samp-android
+git clone https://github.com/vinterely/samp-android-launcher-32-64bit.git
+cd samp-android-launcher-32-64bit
 ```
 
 ### Step 2: Configure Environment Paths
