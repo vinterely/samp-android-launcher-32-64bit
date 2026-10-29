@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="60dp"
+    android:width="57dp"
+    android:viewportWidth="57"
+    android:viewportHeight="60">
+    <path
+        android:fillColor="@drawable/_hud_gps_icon__0_res_0x7f0801de"
+        android:pathData="M0,19C0,8.507 8.507,0 19,0H56.111V39.39C56.111,50.436 47.157,59.39 36.111,59.39H0V19Z"/>
+    <path
+        android:fillColor="#705205"
+        android:pathData="M12,40.998V22.442C12,21.518 12.413,20.851 13.358,20.389L20.885,16.642C21.209,16.513 21.534,16.359 21.8,16.231V39.099L15.129,42.23C14.627,42.461 14.214,42.615 13.8,42.615C12.649,42.615 12,42.025 12,40.998ZM23.954,38.842V16C24.309,16.051 24.574,16.154 24.869,16.308L32.692,20.466V43C32.485,42.949 32.219,42.872 31.954,42.769L23.954,38.842ZM34.875,42.974V20.209L41.871,16.847C42.373,16.59 42.786,16.488 43.199,16.488C44.321,16.488 45,17.027 45,18.079V36.66C45,37.559 44.557,38.226 43.613,38.714L35.348,42.795C35.171,42.872 35.023,42.923 34.875,42.974Z"/>
+</vector>

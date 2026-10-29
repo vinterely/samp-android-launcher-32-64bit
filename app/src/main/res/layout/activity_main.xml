@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loadingapp">
+
+    <!-- TOP BAR: Nickname Box (Start Corner) -->
+    <LinearLayout
+        android:id="@+id/layout_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/top_bar_height"
+        android:layout_marginStart="@dimen/margin_screen_edge"
+        android:layout_marginTop="@dimen/top_bar_margin_top"
+        android:background="@drawable/pill_translucent_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_semibold"
+            android:hint="@string/home_nickname_hint"
+            android:maxWidth="160dp"
+            android:singleLine="true"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_muted"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/btn_edit_nickname"
+            android:layout_width="@dimen/top_bar_height"
+            android:layout_height="@dimen/top_bar_height"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/desc_edit_nick"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_pencil_edit" />
+    </LinearLayout>
+
+    <!-- TOP BAR: Settings / Menu Button (End Corner) -->
+    <LinearLayout
+        android:id="@+id/btn_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/top_bar_height"
+        android:layout_marginTop="@dimen/top_bar_margin_top"
+        android:layout_marginEnd="@dimen/margin_screen_edge"
+        android:background="@drawable/pill_translucent_bg"
+        android:clickable="true"
+        android:contentDescription="@string/desc_settings"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_menu_gear" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/home_menu"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- TOP BAR: Status Card (Centered Horizontally Between Nickname and Menu) -->
+    <LinearLayout
+        android:id="@+id/card_game_data"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/top_bar_height"
+        android:layout_marginStart="@dimen/margin_standard"
+        android:layout_marginEnd="@dimen/margin_standard"
+        android:background="@drawable/pill_translucent_bg"
+        android:clickable="false"
+        android:contentDescription="@string/desc_data_status"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="18dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintWidth_max="@dimen/status_card_max_width"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_nickname"
+        app:layout_constraintEnd_toStartOf="@+id/btn_settings"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/layout_nickname"
+        app:layout_constraintTop_toTopOf="@+id/layout_nickname">
+
+        <ImageView
+            android:id="@+id/iv_status_icon"
+            android:layout_width="@dimen/status_icon_size"
+            android:layout_height="@dimen/status_icon_size"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_data_complete" />
+
+        <TextView
+            android:id="@+id/tv_status_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_semibold"
+            android:singleLine="true"
+            android:text="@string/home_data_complete"
+            android:textColor="@color/status_text_color"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- MISSING STATE BUTTON: Directly Below Top Bar Centered Under Status Card -->
+    <Button
+        android:id="@+id/btn_download_data"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/download_btn_height"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_download_green_selector"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/home_download_prompt"
+        android:textColor="@color/btn_download_text_dark"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/card_game_data"
+        app:layout_constraintStart_toStartOf="@+id/card_game_data"
+        app:layout_constraintTop_toBottomOf="@+id/card_game_data" />
+
+    <!-- LEFT / START LINK RAIL -->
+    <LinearLayout
+        android:id="@+id/layout_social_rail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_screen_edge"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Telegram -->
+        <ImageButton
+            android:id="@+id/btn_social_telegram"
+            android:layout_width="@dimen/social_btn_size"
+            android:layout_height="@dimen/social_btn_size"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/btn_round_social_bg"
+            android:contentDescription="@string/desc_telegram"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/telegram" />
+
+        <!-- Soroush (using instagram.png icon) -->
+        <ImageButton
+            android:id="@+id/btn_social_soroush"
+            android:layout_width="@dimen/social_btn_size"
+            android:layout_height="@dimen/social_btn_size"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/btn_round_social_bg"
+            android:contentDescription="@string/desc_soroush"
+            android:padding="11dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/instagram" />
+
+        <!-- Aparat -->
+        <ImageButton
+            android:id="@+id/btn_social_aparat"
+            android:layout_width="@dimen/social_btn_size"
+            android:layout_height="@dimen/social_btn_size"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/btn_round_social_bg"
+            android:contentDescription="@string/desc_aparat"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_aparat" />
+
+        <!-- Website -->
+        <ImageButton
+            android:id="@+id/btn_social_website"
+            android:layout_width="@dimen/social_btn_size"
+            android:layout_height="@dimen/social_btn_size"
+            android:background="@drawable/btn_round_social_bg"
+            android:contentDescription="@string/desc_website"
+            android:padding="11dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_icon_web_1" />
+    </LinearLayout>
+
+    <!-- BOTTOM: Primary Play Button -->
+    <LinearLayout
+        android:id="@+id/btn_play"
+        android:layout_width="260dp"
+        android:layout_height="@dimen/btn_play_min_height"
+        android:layout_marginBottom="@dimen/margin_screen_edge"
+        android:background="@drawable/btn_amber_selector"
+        android:clickable="true"
+        android:contentDescription="@string/desc_play"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_play_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@string/home_play"
+            android:textColor="#14091F"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <!-- Optional compatibility container (kept hidden) -->
+    <FrameLayout
+        android:id="@+id/fragment_place"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

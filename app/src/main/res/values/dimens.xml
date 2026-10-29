@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="hud_margin_start">16dp</dimen>
+    <dimen name="hud_margin_top">8dp</dimen>
+
+    <!-- Launcher Home Redesign Dimensions -->
+    <dimen name="top_bar_height">48dp</dimen>
+    <dimen name="top_bar_margin_top">20dp</dimen>
+    <dimen name="status_card_max_width">260dp</dimen>
+    <dimen name="status_icon_size">24dp</dimen>
+    <dimen name="download_btn_height">40dp</dimen>
+    <dimen name="download_btn_radius">20dp</dimen>
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="card_stroke_width">1dp</dimen>
+    <dimen name="pill_corner_radius">24dp</dimen>
+    <dimen name="btn_min_touch_target">48dp</dimen>
+    <dimen name="btn_play_min_height">56dp</dimen>
+    <dimen name="btn_play_corner_radius">14dp</dimen>
+    <dimen name="social_btn_size">48dp</dimen>
+    <dimen name="margin_screen_edge">20dp</dimen>
+    <dimen name="margin_standard">16dp</dimen>
+    <dimen name="padding_card">18dp</dimen>
+</resources>

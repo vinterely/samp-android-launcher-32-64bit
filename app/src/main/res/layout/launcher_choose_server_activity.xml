@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/glory_bg_choose_server">
+
+    <!-- Blurred Background Photo -->
+    <ImageView
+        android:id="@+id/iv_choose_server_bg_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_choose_server_photo"
+        android:scaleType="centerCrop"
+        android:importantForAccessibility="no" />
+
+    <!-- Dark Overlay (#14091F at ~50% alpha: #8014091F) -->
+    <View
+        android:id="@+id/view_choose_server_dark_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8014091F"
+        android:importantForAccessibility="no" />
+
+    <!-- Container for the 3 Server Cards and Title -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cards_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@+id/start_v_line"
+        app:layout_constraintEnd_toEndOf="@+id/end_v_line"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/back_btn"
+        app:layout_constraintVertical_bias="0.5">
+
+        <!-- Title Pill ("انتخاب سرور") positioned above middle card -->
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/dialog_first_btn_bg"
+            app:layout_constraintBottom_toTopOf="@+id/play_gold_btn"
+            app:layout_constraintStart_toStartOf="@+id/play_gold_btn"
+            app:layout_constraintEnd_toEndOf="@+id/play_gold_btn"
+            app:layout_constraintWidth_percent="0.22"
+            app:layout_constraintHeight_percent="0.07" />
+
+        <TextView
+            android:id="@+id/tv_title_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="انتخاب سرور"
+            android:textColor="#ffffff"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="@+id/imageView1"
+            app:layout_constraintEnd_toEndOf="@+id/imageView1"
+            app:layout_constraintTop_toTopOf="@+id/imageView1"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView1" />
+
+        <!-- Left Card: Forum ("ورود به انجمن") -->
+        <ImageView
+            android:id="@+id/play_crime_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/server_click_1"
+            android:contentDescription="ورود به انجمن"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/play_gold_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="0.30"
+            app:layout_constraintHeight_percent="0.75" />
+
+        <!-- Middle Card: Play Game ("ورود به بازی") -->
+        <ImageView
+            android:id="@+id/play_gold_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/server_click_2"
+            android:contentDescription="ورود به بازی"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toEndOf="@+id/play_crime_btn"
+            app:layout_constraintEnd_toStartOf="@+id/play_rubl_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="0.30"
+            app:layout_constraintHeight_percent="0.75" />
+
+        <!-- Right Card: Website ("ورود به سایت") -->
+        <ImageView
+            android:id="@+id/play_rubl_btn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/server_click_3"
+            android:contentDescription="ورود به سایت"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toEndOf="@+id/play_gold_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="0.30"
+            app:layout_constraintHeight_percent="0.75" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Bottom Button: Back to Main Menu ("بازگشت به منوی اصلی") -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/back_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ic_btn_social_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.22"
+        app:layout_constraintHeight_percent="0.10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="بازگشت به منوی اصلی"
+            android:textColor="#ffffff"
+            android:textSize="11sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/montserrat_semibold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Landscape Guidelines for 16:9, 18:9, 20:9 -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_v_line"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_v_line"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

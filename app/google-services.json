@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "722601264514",
+    "project_id": "gloryrp-ee812",
+    "storage_bucket": "gloryrp-ee812.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722601264514:android:820c95abdbb32f88467b9b",
+        "android_client_info": {
+          "package_name": "com.gloryrp.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKBwAeWC3k0s9Rs8q79RBdTtgnGfW91_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

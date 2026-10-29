@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_19sdp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/pons2"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/faq_item_description_bg" />
+
+    <ImageView android:id="@+id/pon" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintDimensionRatio="701:142" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/btn" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="578dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginBottom="40dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/muller_regular"
+        android:maxLines="1"
+        android:text="Зависает лаунчер при обновлении..."
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@id/pon"
+        app:layout_constraintEnd_toStartOf="@id/faq_item_arrow"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.483" />
+
+    <ImageView
+        android:id="@+id/faq_item_arrow"
+        android:layout_width="@dimen/_9sdp"
+        android:layout_height="@dimen/_9sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        app:layout_constraintBottom_toBottomOf="@id/pon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_faq_arrow" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/expandableLayout"
+        android:layout_width="618dp"
+        android:layout_height="100dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pon"
+        app:layout_constraintVertical_bias="0.65999997">
+
+        <TextView
+            android:id="@+id/plotTextView"
+            android:layout_width="296dp"
+            android:layout_height="98dp"
+            android:fontFamily="@font/muller_regular"
+            android:isScrollContainer="false"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/_18sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_18sdp"
+            android:paddingBottom="@dimen/_12sdp"
+            android:scrollHorizontally="false"
+            android:text="text"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

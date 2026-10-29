@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/_14sdp"/>
+            <gradient
+                android:startColor="@color/gradient1"
+                android:endColor="@color/gradient2"
+                android:angle="0"/>
+        </shape>
+    </item>
+    <item
+        android:gravity="center"
+        android:height="15dp"
+        android:width="25dp"
+        android:drawable="@drawable/br_button_vector_img"/>
+</layer-list>

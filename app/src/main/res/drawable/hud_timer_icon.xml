@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="25dp"
+    android:width="25dp"
+    android:viewportWidth="25"
+    android:viewportHeight="25">
+    <path
+        android:fillColor="@drawable/_hud_timer_icon__0_res_0x7f0801fa"
+        android:pathData="M12.5,12.5m-11.5,0a11.5,11.5 0,1 1,23 0a11.5,11.5 0,1 1,-23 0"
+        android:strokeColor="@drawable/_hud_timer_icon__1_res_0x7f0801fb"
+        android:strokeWidth="2"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M12,7V14H16.5"
+        android:strokeColor="#808080"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"/>
+</vector>

@@ -1,0 +1,107 @@
+HUD va Radar o'zgarishlari hisoboti
+O'zgarishlar muvaffaqiyatli amalga oshirildi. Chat chap tomonga va radar o'ng tomondagi HUD aylanasi ichiga ko'chirildi.
+
+O'zgarishlar Ro'yxati
+Chat Joylashuvi
+uisettings.cpp
+ faylida chatning boshlang'ich koordinatalari o'zgartirildi:
+
+Oldin: ImVec2(114.0f, 12.0f)
+Hozir: ImVec2(15.0f, 15.0f) (Chap yuqori burchak)
+Radar Joylashuvi
+hooks.cpp
+ faylida radarning chizilish koordinatalari o'ng tomondagi HUD qismini qoplaydigan qilib sozlandi:
+
+Oldin: X = 36.0f, Y = 72.0f
+Hozir: X = 545.0f, Y = 75.0f (O'ng HUD aylanasi ichida)
+Natija
+1
+1
+#define IMGUI_DEFINE_MATH_OPERATORS
+2
+2
+#include "../vendor/imgui/imgui.h"
+3
+3
+#include "../vendor/imgui/imgui_internal.h"
+⋯ Expand 32 more lines
+36
+36
+/* chat */
+37
+37
+int UISettings::m_chatDispMesssages = 15;
+38
+38
+int UISettings::m_chatMaxMessages = 60;
+39
+ImVec2 UISettings::m_chatPos = ImVec2(114.0f, 12.0f);
+39
+ImVec2 UISettings::m_chatPos = ImVec2(15.0f, 15.0f);
+40
+40
+ImVec2 UISettings::m_chatSize = ImVec2(550.0f, 0.0f);
+41
+41
+ImVec2 UISettings::m_chatItemSize = ImVec2(400.0f, 13.0f);
+42
+42
+⋯ Expand 83 more lines
+126
+126
+	m_buttonVoicePos = m_buttonVoicePos * m_scaleFactor;
+127
+127
+	m_buttonVoiceSize = m_buttonVoiceSize * m_scaleFactor;
+128
+128
+}
+1
+1
+#include <GLES2/gl2.h>
+2
+2
+#include "../main.h"
+3
+3
+#include "../vendor/armhook/patch.h"
+⋯ Expand 208 more lines
+212
+212
+213
+213
+    auto radar = CTouchInterface::m_pWidgets[WIDGET_RADAR];
+214
+214
+    if (radar) {
+215
+        radar->m_fOriginX = 36.0f;
+216
+        radar->m_fOriginY = 72.0f;
+215
+        radar->m_fOriginX = 545.0f;
+216
+        radar->m_fOriginY = 75.0f;
+217
+217
+218
+218
+        radar->m_fScaleX = 33.5f;
+219
+219
+        radar->m_fScaleY = 33.5f;
+⋯ Expand 1835 more lines
+2055
+2055
+	//CHook::Redirect("_ZN16cHandlingDataMgr22ConvertDataToGameUnitsEP13tHandlingData", &cHandlingDataMgr__ConvertDataToGameUnits);
+2056
+2056
+    HookCPad();
+2057
+2057
+}
+NOTE
+
+Radar o'ng tomonga ko'chirilganidan keyin, u HUD rasmidagi aylananing ichida ko'rinishi kerak. Agar joylashuvi biroz noaniq bo'lsa, 
+hooks.cpp
+ dagi X va Y qiymatlarini o'zgartirish orqali yanada aniqroq sozlash mumkin.

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/iv_update_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/launcher_home_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Dark Overlay (88% #14091F) -->
+    <View
+        android:id="@+id/view_update_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#E014091F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Centered Update Card (max 520dp) -->
+    <LinearLayout
+        android:id="@+id/card_force_update"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/glory_bg_force_update_card"
+        android:padding="32dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintWidth_max="520dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <!-- 64dp Red-tinted Warning / Update Icon -->
+        <FrameLayout
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/glory_bg_step_circle_pending">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:src="@drawable/glory_ic_update_alert" />
+        </FrameLayout>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_update_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="نسخه لانچر قدیمی است"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tv_update_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="برای ورود به بازی باید آخرین نسخه لانچر را نصب کنید."
+            android:textColor="#C3B5D9"
+            android:textSize="14sp" />
+
+        <!-- Version Comparison Pill -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@drawable/glory_bg_step_circle_pending">
+
+            <TextView
+                android:id="@+id/tv_version_pill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="نسخه شما: ۱.۰.۰ ← نسخه جدید: ۱.۰.۱"
+                android:textColor="#F5A30A"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Download &amp; Install APK Button -->
+        <Button
+            android:id="@+id/btn_download_apk"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="26dp"
+            android:text="دانلود و نصب نسخه جدید"
+            android:textColor="#14091F"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@drawable/glory_btn_primary_amber" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

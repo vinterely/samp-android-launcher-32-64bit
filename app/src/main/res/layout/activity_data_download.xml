@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/iv_download_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/launcher_home_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Dark Overlay (82% #14091F) -->
+    <View
+        android:id="@+id/view_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#D114091F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Centered Download Card (max 560dp) -->
+    <LinearLayout
+        android:id="@+id/card_download"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/glory_bg_download_card"
+        android:padding="28dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintWidth_max="560dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <!-- Top Row: Icon + Title &amp; Subtitle -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- 48dp Round Amber Icon -->
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/glory_bg_step_circle_active">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/glory_ic_download_cloud" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="14dp">
+
+                <TextView
+                    android:id="@+id/tv_download_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="در حال دانلود دیتای بازی"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_download_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="لطفاً برنامه را نبندید"
+                    android:textColor="#A69BBB"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 4-Step Indicator -->
+        <LinearLayout
+            android:id="@+id/layout_step_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="22dp">
+
+            <!-- Step 1: دانلود -->
+            <LinearLayout
+                android:id="@+id/step_1_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/step_1_badge"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:gravity="center"
+                    android:text="۱"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/glory_bg_step_circle_active" />
+
+                <TextView
+                    android:id="@+id/step_1_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="دانلود"
+                    android:textColor="#F5A30A"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/step_line_1"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.5"
+                android:background="#3A2A55" />
+
+            <!-- Step 2: بررسی فایل -->
+            <LinearLayout
+                android:id="@+id/step_2_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/step_2_badge"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:gravity="center"
+                    android:text="۲"
+                    android:textColor="#A69BBB"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/glory_bg_step_circle_pending" />
+
+                <TextView
+                    android:id="@+id/step_2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="بررسی فایل"
+                    android:textColor="#7A6899"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/step_line_2"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.5"
+                android:background="#3A2A55" />
+
+            <!-- Step 3: استخراج -->
+            <LinearLayout
+                android:id="@+id/step_3_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/step_3_badge"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:gravity="center"
+                    android:text="۳"
+                    android:textColor="#A69BBB"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/glory_bg_step_circle_pending" />
+
+                <TextView
+                    android:id="@+id/step_3_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="استخراج"
+                    android:textColor="#7A6899"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/step_line_3"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.5"
+                android:background="#3A2A55" />
+
+            <!-- Step 4: پایان -->
+            <LinearLayout
+                android:id="@+id/step_4_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/step_4_badge"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:gravity="center"
+                    android:text="۴"
+                    android:textColor="#A69BBB"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/glory_bg_step_circle_pending" />
+
+                <TextView
+                    android:id="@+id/step_4_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="پایان"
+                    android:textColor="#7A6899"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Progress Percentage &amp; Size -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp">
+
+            <TextView
+                android:id="@+id/tv_progress_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="۰٪"
+                android:textColor="#F5A30A"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_progress_bytes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBaseline="@id/tv_progress_percent"
+                android:text="۰ از ۰ مگابایت"
+                android:textColor="#C3B5D9"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <!-- 12dp Rounded Progress Bar -->
+        <ProgressBar
+            android:id="@+id/pb_download"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_marginTop="8dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/glory_progress_horizontal" />
+
+        <!-- Speed &amp; ETA Row -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tv_download_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="۰ KB/s"
+                android:textColor="#9E8FB2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_download_eta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="--:-- باقی‌مانده"
+                android:textColor="#9E8FB2"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <!-- Status Message / Error Message -->
+        <TextView
+            android:id="@+id/tv_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="در حال آماده‌سازی..."
+            android:textColor="#DFD7EE"
+            android:textSize="13sp" />
+
+        <!-- Bottom Action Buttons -->
+        <LinearLayout
+            android:id="@+id/layout_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <!-- Pause / Resume Button -->
+            <Button
+                android:id="@+id/btn_pause_resume"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="توقف"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:background="@drawable/glory_btn_secondary_selector" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+            <!-- Cancel Button -->
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="لغو"
+                android:textColor="#C3B5D9"
+                android:textSize="14sp"
+                android:background="@drawable/glory_btn_secondary_selector" />
+        </LinearLayout>
+
+        <!-- Retry Button (Shown on error) -->
+        <Button
+            android:id="@+id/btn_retry"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="20dp"
+            android:text="تلاش مجدد"
+            android:textColor="#14091F"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:background="@drawable/glory_btn_primary_amber" />
+
+        <!-- Finish Button (Shown on complete) -->
+        <Button
+            android:id="@+id/btn_finish"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="20dp"
+            android:text="ورود به بازی"
+            android:textColor="#14091F"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:background="@drawable/glory_btn_primary_amber" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

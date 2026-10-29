@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base dark purple background (#2A1A40 to #14091F) -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="270"
+                android:startColor="#2A1A40"
+                android:endColor="#14091F" />
+        </shape>
+    </item>
+
+    <!-- Soft radial purple glow centered behind the cards -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="65%p"
+                android:centerX="50%"
+                android:centerY="48%"
+                android:startColor="#4A651B9A"
+                android:centerColor="#1E320D50"
+                android:endColor="#0014091F" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name="com.glory.App"
+        android:allowBackup="false"
+        android:gwpAsanMode="always"
+        android:requestLegacyExternalStorage="true"
+        android:banner="@mipmap/ic_launcher"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:isGame="true"
+        android:largeHeap="true"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustNothing"
+        android:resizeableActivity="true"
+        android:supportsPictureInPicture="false"
+        tools:replace="android:icon,android:allowBackup"
+        tools:ignore="UnusedAttribute">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.glory.launcher.activities.HomeActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:exported="true"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode|screenLayout|smallestScreenSize|density"
+            android:windowSoftInputMode="adjustPan"
+            android:resizeableActivity="false">
+        </activity>
+
+        <activity
+            android:name="com.glory.launcher.activities.LoadGameActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode|screenLayout|smallestScreenSize|density"
+            android:resizeableActivity="false" />
+
+        <activity
+            android:name="com.glory.launcher.activities.ChooseServerActivity"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:windowSoftInputMode="adjustNothing"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode|screenLayout|smallestScreenSize|density"
+            android:resizeableActivity="false" />
+
+
+
+        <activity
+            android:name="com.glory.game.SAMP"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode|screenLayout|smallestScreenSize|density"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true"
+            android:resizeableActivity="false" />
+
+        <!-- SplashActivity - asosiy launch activity -->
+        <activity
+            android:name="com.glory.launcher.activities.SplashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:exported="true"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.glory.launcher.activities.MainActivity"
+            android:screenOrientation="landscape"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+
+        <activity
+            android:name="com.glory.launcher.activities.SettingsActivity"
+            android:screenOrientation="sensorLandscape"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode|screenLayout|smallestScreenSize|density"
+            android:windowSoftInputMode="adjustNothing"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+
+        <activity
+            android:name="com.glory.launcher.activities.FaqAct"
+            android:screenOrientation="landscape"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+
+        <activity
+            android:name="com.glory.launcher.activities.StartActivity"
+            android:screenOrientation="landscape"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+
+        <activity
+            android:name="com.glory.launcher.activities.DownloadActivity"
+            android:screenOrientation="landscape"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+
+        <activity
+            android:name="com.glory.launcher.activities.DataDownloadActivity"
+            android:screenOrientation="sensorLandscape"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode|screenLayout|smallestScreenSize|density"
+            android:windowSoftInputMode="adjustNothing"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+
+        <activity
+            android:name="com.glory.launcher.activities.ForceUpdateActivity"
+            android:screenOrientation="sensorLandscape"
+            android:exported="false"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode|screenLayout|smallestScreenSize|density"
+            android:windowSoftInputMode="adjustNothing"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
+
+        <service
+            android:name="com.glory.launcher.services.DataDownloadService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"/>
+
+        <!-- GTASA asosiy o'yin activitysi -->
+        <activity
+            android:name="com.glory.game.GTASA"
+            android:screenOrientation="landscape"
+            android:exported="true"
+            android:keepScreenOn="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:hardwareAccelerated="true"
+            android:largeHeap="true"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustNothing">
+        </activity>
+
+        <!-- Firebase xizmati -->
+        <service
+            android:name="com.glory.launcher.network.FirebaseMessageReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_baseline_notifications_24" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <meta-data android:name="android.max_aspect" android:value="2.1"/>
+    </application>
+</manifest>

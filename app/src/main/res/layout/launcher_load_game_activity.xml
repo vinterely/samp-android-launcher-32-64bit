@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/launcher_load_game_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#14091f">
+
+    <VideoView
+        android:id="@+id/intro_video_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/current_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="در حال دریافت فایل‌ها: "
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="italic"
+        android:fontFamily="@font/montserrat_medium"
+        app:layout_constraintBottom_toTopOf="@+id/download_progress_bar"
+        app:layout_constraintStart_toStartOf="@+id/download_progress_bar" />
+
+    <ProgressBar
+        android:id="@+id/download_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_23sdp"
+        android:layout_marginEnd="@dimen/_23sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:progress="0"
+        android:progressDrawable="@drawable/launcher_load_game_progress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/download_progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:text="1,06 گیگابایت از 1,39 گیگابایت / 50%"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp"
+        android:textStyle="italic"
+        android:fontFamily="@font/montserrat_medium"
+        app:layout_constraintBottom_toTopOf="@+id/download_progress_bar"
+        app:layout_constraintEnd_toEndOf="@+id/download_progress_bar"
+        app:layout_constraintWidth_percent="0.055" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

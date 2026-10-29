@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/proxima_nova_semibold"
+        android:text="در حال بارگذاری..."
+        android:textAllCaps="true"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.646" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="185dp"
+        android:layout_height="159dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.341"
+        app:srcCompat="@drawable/logobg" />
+
+    <FrameLayout
+        android:id="@+id/progress"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_6sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.76">
+
+        <com.akexorcist.roundcornerprogressbar.indeterminate.IndeterminateCenteredRoundCornerProgressBar
+            android:id="@+id/progressBarUnzip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:rcAnimationSpeedScale="4.75"
+            app:rcBackgroundColor="#2c123d"
+            app:rcProgressColor="#B84BDE" />
+
+        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+            android:id="@+id/progressView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:rcBackgroundColor="#F21A2436"
+            app:rcMax="100.0"
+            app:rcProgress="0.0"
+            app:rcProgressColor="#B3B84BDE"
+            app:rcRadius="10.0dip"
+            app:rcReverse="false"
+            app:rcSecondaryProgress="0.0"
+            app:rcSecondaryProgressColor="#ffffffff" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/proxima_nova_semibold"
+        android:text="در حال دریافت فایل‌های بازی..."
+        android:textColor="#EBEDF1"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="@+id/progress"
+        app:layout_constraintTop_toBottomOf="@+id/progress" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/proxima_nova_semibold"
+        android:text="10%"
+        android:textColor="#EDEEEF"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/progress"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

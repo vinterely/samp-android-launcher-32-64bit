@@ -1,0 +1,22 @@
+# Build and Gradle
+/build
+.gradle/
+app/.cxx/
+app/build/
+.cxx/
+*.iml
+.idea/
+local.properties
+
+# Android Keystores & Keys (Security)
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+
+# Compiled outputs & logs
+*.apk
+*.aab
+*.log
+*.tmp

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ladingscreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop">
+
+    <com.tuyenmonkey.mkloader.MKLoader
+        android:id="@+id/loader"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:mk_color="@color/white"
+        app:mk_type="Whirlpool" />
+
+    <TextView
+        android:id="@+id/game_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:fontFamily="@font/akrobat_bold"
+        android:letterSpacing="0.2"
+        android:text="در حال ورود به بازی..."
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/loader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toEndOf="@+id/loader"
+        app:layout_constraintTop_toTopOf="@+id/loader"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@+id/start_v_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent="0.03"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@+id/start_h_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent="0.95"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@+id/end_v_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent="0.95"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

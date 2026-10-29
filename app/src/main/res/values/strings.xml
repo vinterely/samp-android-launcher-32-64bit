@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">GloryRP</string>
+    <string name="players_list_header_dialog">لیست بازیکنان</string>
+    <string name="players_list_header_first_column">شناسه</string>
+    <string name="players_list_header_fourth_column">پینگ</string>
+    <string name="players_list_header_second_column">نام کاربری</string>
+    <string name="players_list_header_third_column">سطح</string>
+    <string name="players_list_search_hint">جستجوی بازیکن...</string>
+    <string name="buildVersion">Build v1.4.0 (arm64-v8a)</string>
+    <string name="enterNik">نام کاربری خود را وارد کنید</string>
+    <string name="minLengthNik">طول نام کاربری باید حداقل ۴ نویسه باشد</string>
+    <string name="mustContains_">نام کاربری باید شامل کاراکتر \"_\" باشد (مثال: Name_Family)</string>
+    <string name="nik">نام_نام‌خانوادگی</string>
+    <string name="game_files_not_found_title">فایل‌های بازی یافت نشد</string>
+    <string name="game_files_not_found_desc">فایل‌های بازی پیدا نشد!\n\nلطفاً پوشه دیتا را در مسیر زیر قرار دهید:\n/storage/emulated/0/GloryMobile/\n\nشامل پوشه‌های: anim, audio, data, models, texdb و SAMP\nپس از قرار دادن فایل‌ها، بازی را مجدداً باز کنید.</string>
+    <string name="dialog_ok">باشه</string>
+
+    <!-- Launcher Home Strings -->
+    <string name="home_menu">منو</string>
+    <string name="home_play">ورود به بازی</string>
+    <string name="home_nickname_hint">نام کاربری</string>
+    <string name="home_data_status_title">وضعیت دیتای بازی</string>
+    <string name="home_data_complete">دیتا شناسایی شد</string>
+    <string name="home_data_incomplete">دیتا ناقص است</string>
+    <string name="home_data_missing">دیتا شناسایی نشد</string>
+    <string name="home_download_prompt">آیا قصد دارید دیتا را برایتان دانلود کنیم؟</string>
+    <string name="home_settings_soon">بخش منو و تنظیمات به‌زودی در دسترس قرار می‌گیرد</string>
+    <string name="home_data_needed_toast">برای ورود ابتدا باید دیتای کامل بازی را نصب کنید</string>
+    <string name="home_downloader_soon">دانلودر خودکار دیتا به‌زودی در دسترس قرار می‌گیرد</string>
+    <string name="desc_telegram">کانال تلگرام گلوری</string>
+    <string name="desc_soroush">کانال سروش گلوری</string>
+    <string name="desc_aparat">کانال آپارات گلوری</string>
+    <string name="desc_website">وب‌سایت گلوری</string>
+    <string name="desc_settings">تنظیمات و منو</string>
+    <string name="desc_edit_nick">ویرایش نام کاربری</string>
+    <string name="desc_play">دکمه ورود به بازی</string>
+    <string name="desc_data_status">وضعیت دیتای بازی</string>
+</resources>

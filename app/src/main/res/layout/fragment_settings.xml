@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_splash">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="61dp"
+        android:layout_height="51dp"
+        android:src="@drawable/close"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.107" />
+
+    <TextView
+        android:id="@id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/proxima_nova_semibold"
+        android:text="تنظیمات"
+        android:textAllCaps="true"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.421" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/constraintLayout"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ic_bg_edit"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.615">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/proxima_nova_semibold"
+            android:text="نام کاربری"
+            android:textAllCaps="true"
+            android:textColor="#ff6a7ba7"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTextNickName"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@null"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_@.][_-=)($"
+            android:fontFamily="@font/proxima_nova_semibold"
+            android:hint="Name_Family"
+            android:imeOptions="actionDone|flagForceAscii"
+            android:inputType="text"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#ffffffff"
+            android:textColorHint="#ff6a7ba7"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textView5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout12"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/ic_bg_edit"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <TextView
+            android:id="@id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/proxima_nova_semibold"
+            android:text="IP"
+            android:textAllCaps="true"
+            android:textColor="#ff6a7ba7"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTextIP"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="12dp"
+            android:background="@null"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_@.][_-=)($"
+            android:fontFamily="@font/proxima_nova_semibold"
+            android:hint="127.0.0.1"
+            android:imeOptions="actionDone|flagForceAscii"
+            android:inputType="text"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#ffffffff"
+            android:textColorHint="#ff6a7ba7"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textView10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.538" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout13"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_bg_edit"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout12">
+
+        <TextView
+            android:id="@id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/proxima_nova_semibold"
+            android:text="پورت"
+            android:textAllCaps="true"
+            android:textColor="#ff6a7ba7"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTextPort"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="12dp"
+            android:background="@null"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_@.][_-=)($"
+            android:fontFamily="@font/proxima_nova_semibold"
+            android:hint="7777"
+            android:imeOptions="actionDone|flagForceAscii"
+            android:inputType="text"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#ffffffff"
+            android:textColorHint="#ff6a7ba7"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView11"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.538" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/repairGame"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/btn_green"
+        android:fontFamily="@font/proxima_nova_semibold"
+        android:text="بررسی و تعمیر فایل‌ها"
+        android:textAllCaps="true"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_social_youtube_bg"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_social_discord_bg"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <ImageView
+        android:id="@id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="76dp"
+        android:src="@drawable/ic_social_vk_bg"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="کانال تلگرام"
+        android:textAllCaps="true"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintBottom_toBottomOf="@id/imageView3"
+        app:layout_constraintStart_toEndOf="@id/imageView6"
+        app:layout_constraintTop_toTopOf="@id/imageView3" />
+
+    <Button
+        android:id="@+id/button_vk"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_23sdp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_btn_social_bg"
+        android:fontFamily="@font/proxima_nova_semibold"
+        android:text="مشاهده"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:src="@drawable/ic_icon_social_youtube"
+        app:layout_constraintBottom_toBottomOf="@id/imageView4"
+        app:layout_constraintStart_toStartOf="@id/imageView4"
+        app:layout_constraintTop_toTopOf="@id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="کانال یوتیوب"
+        android:textAllCaps="true"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintBottom_toBottomOf="@id/imageView4"
+        app:layout_constraintStart_toEndOf="@id/imageView7"
+        app:layout_constraintTop_toTopOf="@id/imageView4" />
+
+    <Button
+        android:id="@+id/button_yt"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_23sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:background="@drawable/ic_btn_social_bg"
+        android:fontFamily="@font/proxima_nova_semibold"
+        android:text="مشاهده"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@id/imageView4"
+        app:layout_constraintEnd_toEndOf="@id/imageView4"
+        app:layout_constraintTop_toTopOf="@id/imageView4" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:src="@drawable/ic_icon_social_discord"
+        app:layout_constraintBottom_toBottomOf="@id/imageView5"
+        app:layout_constraintStart_toStartOf="@id/imageView5"
+        app:layout_constraintTop_toTopOf="@id/imageView5" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:text="سرور دیسکورد"
+        android:textAllCaps="true"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintBottom_toBottomOf="@id/imageView5"
+        app:layout_constraintStart_toEndOf="@id/imageView8"
+        app:layout_constraintTop_toTopOf="@id/imageView5"
+        app:layout_constraintVertical_bias="0.51" />
+
+    <Button
+        android:id="@+id/button_discord"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_23sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:background="@drawable/ic_btn_social_bg"
+        android:fontFamily="@font/proxima_nova_semibold"
+        android:text="مشاهده"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@id/imageView8"
+        app:layout_constraintEnd_toEndOf="@id/imageView5"
+        app:layout_constraintTop_toTopOf="@id/imageView8" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:src="@drawable/ic_icon_social_vk"
+        app:layout_constraintBottom_toBottomOf="@id/imageView3"
+        app:layout_constraintStart_toStartOf="@id/imageView3"
+        app:layout_constraintTop_toTopOf="@id/imageView3" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text=" "
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/imageView5"
+        app:layout_constraintStart_toStartOf="@id/imageView5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/constraintLayout2"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/ic_bg_edit"
+        app:layout_constraintBottom_toTopOf="@+id/repairGame"
+        app:layout_constraintEnd_toEndOf="@+id/repairGame"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/repairGame">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Настройки уведомлений"
+            android:text="دریافت اعلان‌ها"
+            android:textAllCaps="true"
+            android:textColor="#ff6a7ba7"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.47" />
+
+        <ToggleButton
+            android:id="@+id/switch1"
+            android:layout_width="@dimen/_48sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/togle_selector"
+            android:checked="false"
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

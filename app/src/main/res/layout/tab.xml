@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:id="@+id/tab_main"
+    android:background="@drawable/button_gradient_pushed"
+    android:layout_width="@dimen/_300sdp"
+    android:layout_height="@dimen/_240sdp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/menu_list_cmd1"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:textSize="@dimen/_6sdp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tab_server_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GloryRP"
+            android:singleLine="true"
+            android:layout_weight="4"
+            android:font="@font/notosans_black"
+            android:textFontWeight="700"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="107dp"
+            android:layout_height="@dimen/_13sdp"
+            android:layout_weight="2"
+            android:layout_marginEnd="@dimen/_3sdp">
+
+            <EditText
+                android:textSize="@dimen/_6sdp"
+                android:textColor="#707070"
+                android:textColorHint="@color/progress_gray"
+                android:id="@+id/search_view"
+                android:background="@drawable/players_list_border_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/players_list_search_hint"
+                android:singleLine="true"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:imeOptions="flagNoExtractUi|flagNoFullscreen|actionDone"
+                android:paddingStart="@dimen/_5sdp"
+                android:font="@font/notosans_regular"
+                android:autofillHints="no"
+                android:importantForAutofill="no"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/icon_search_view"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/icon_clear_search_text"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/ic_close"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:textSize="@dimen/_7sdp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/players_list_value_players"
+            android:background="@drawable/button_gradient_idle"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:text="0/1000"
+            android:includeFontPadding="false"
+            android:shadowColor="#33383838"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="5"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:font="@font/notosans_black"/>
+
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:contentDescription="Закрыть"
+            android:padding="@dimen/_1sdp"
+            android:src="@drawable/close" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/players_list_name_column"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@+id/menu_list_cmd1">
+
+        <TextView
+            android:textSize="@dimen/_7sdp"
+            android:textColor="#F8F8F8"
+            android:gravity="center_vertical"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:text="@string/players_list_header_first_column"
+            android:includeFontPadding="false"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/_5sdp"
+            android:font="@font/notosans_black"/>
+
+        <TextView
+            android:textSize="@dimen/_7sdp"
+            android:textColor="#F2F0F0"
+            android:gravity="center_vertical"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="wrap_content"
+            android:text="نام کاربری"
+            android:includeFontPadding="false"
+            android:layout_weight="5"
+            android:font="@font/notosans_black"/>
+
+        <TextView
+            android:textSize="@dimen/_7sdp"
+            android:textColor="#FFFFFF"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:text="سطح"
+            android:includeFontPadding="false"
+            android:layout_weight="3"
+            android:paddingStart="@dimen/_10sdp"
+            android:font="@font/notosans_black"/>
+
+        <TextView
+            android:textSize="@dimen/_7sdp"
+            android:textColor="#FDFDFD"
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="match_parent"
+            android:text="پینگ"
+            android:includeFontPadding="false"
+            android:layout_weight="2"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:font="@font/notosans_black"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:background="#4F514F"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/players_list_name_column"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/players_list"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginTop="1dp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

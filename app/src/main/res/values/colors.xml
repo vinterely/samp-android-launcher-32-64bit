@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Purple &amp; Base Theme -->
+    <color name="colorAccent">#B84BDE</color>
+    <color name="colorPrimary">#B84BDE</color>
+    <color name="colorPrimaryDark">#8E24AA</color>
+    <color name="colorMain">#8E24AA</color>
+    <color name="colorButtonStart">#A100FF</color>
+    <color name="colorOrange">#B84BDE</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#8E24AA</color>
+    <color name="purple_700">#6A1B9A</color>
+    <color name="teal_200">#CE93D8</color>
+    <color name="teal_700">#8E24AA</color>
+    <color name="black">#FF000000</color>
+    <color name="blue">#8E24AA</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#808080</color>
+    <color name="wallet_highlighted_text_holo_dark">#66B84BDE</color>
+    <color name="yellow">#fbc02d</color>
+    <color name="shadow_white">#2bffffff</color>
+    <color name="shadow_black">#4d000000</color>
+    <color name="gradient1">#A100FF</color>
+    <color name="gradient2">#8E24AA</color>
+    <color name="speed">#ffffc53d</color>
+    <color name="transparent">#00000000</color>
+    <color name="selected_news_color">#B84BDE</color>
+    <color name="default_news_color">#323232</color>
+    <color name="progress_gray">#FFD8D8D8</color>
+    <color name="progress_gray_dark">#FF383838</color>
+    <color name="default_blue_light">#B84BDE</color>
+
+    <!-- Launcher Home Redesign Colors -->
+    <color name="bg_card_translucent">#B314091F</color>
+    <color name="border_card">#3A2A55</color>
+    <color name="bg_pill">#B314091F</color>
+    <color name="border_pill">#4D3A2A55</color>
+    <color name="color_amber">#F5A30A</color>
+    <color name="color_amber_dark">#D98A00</color>
+    <color name="color_amber_light">#FFB733</color>
+    <color name="status_complete">#10B981</color>
+    <color name="status_incomplete">#F59E0B</color>
+    <color name="status_missing">#EF4444</color>
+    <color name="status_text_color">#F4EEFC</color>
+    <color name="btn_download_green">#2ECC71</color>
+    <color name="btn_download_green_pressed">#27AE60</color>
+    <color name="btn_download_text_dark">#14091F</color>
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#B3B0C8</color>
+    <color name="text_muted">#7A7395</color>
+    <color name="bg_social_round">#9914091F</color>
+    <color name="bg_social_round_pressed">#CC3A2A55</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWarning">#F31100</color>
+    <color name="common_action_bar_splitter">#ffd2d2d2</color>
+</resources>

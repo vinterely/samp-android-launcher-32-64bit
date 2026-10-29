@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F1117"
+    android:layoutDirection="rtl">
+
+    <!-- Header Toolbar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#161822"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_settings_back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:contentDescription="Back"
+            android:focusable="true"
+            android:padding="6dp"
+            android:rotation="180"
+            android:src="@drawable/glory_ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_settings_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="تنظیمات بازی"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_settings_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_settings_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="• شخصی‌سازی هود و عملکرد"
+            android:textColor="#78909C"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_settings_title"
+            app:layout_constraintStart_toEndOf="@+id/tv_settings_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/settings_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- ============================================== -->
+            <!-- SECTION 1: HUD STYLE SELECTION                 -->
+            <!-- ============================================== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="طرح رابط کاربری و هود (HUD Style)"
+                android:textColor="#FFA000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="سبک نمایش نقشه، نوار سلامت و دکمه‌های کنترل بازی را انتخاب کنید:"
+                android:textColor="#90A4AE"
+                android:textSize="11sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <!-- Glory HUD Card -->
+                <LinearLayout
+                    android:id="@+id/card_hud_glory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/settings_card_selected_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="هود گلوری (Glory)"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/radio_hud_glory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#FFA000"
+                            android:checked="true"
+                            android:clickable="false" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="طراحی مدرن با رادار گرد اختصاصی، دسترسی سریع، منو، کیف و کلیدهای کنترل یکپارچه"
+                        android:textColor="#B0BEC5"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <!-- Classic HUD Card -->
+                <LinearLayout
+                    android:id="@+id/card_hud_classic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/settings_card_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="هود کلاسیک (Classic)"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/radio_hud_classic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="#FFA000"
+                            android:checked="false"
+                            android:clickable="false" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="طراحی کلاسیک سن‌آندریاس: رادار سمت چپ بالا، چت استاندارد، و دکمه‌های [ >> | Alt | Y | N | H ] و G"
+                        android:textColor="#B0BEC5"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- ============================================== -->
+            <!-- SECTION 2: PERFORMANCE &amp; FPS                   -->
+            <!-- ============================================== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="نرخ فریم و عملکرد (Performance)"
+                android:textColor="#FFA000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/settings_card_bg"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <!-- FPS Limit Selection -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="محدودیت نرخ فریم (FPS Limit):"
+                    android:textColor="#ECEFF1"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_fps_30"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/settings_pill_bg"
+                        android:text="30 FPS"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btn_fps_60"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/settings_pill_selected_bg"
+                        android:text="60 FPS"
+                        android:textColor="#101014"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_fps_90"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/settings_pill_bg"
+                        android:text="90 FPS"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btn_fps_120"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/settings_pill_bg"
+                        android:text="120 FPS"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#262A38" />
+
+                <!-- FPS Counter Toggle -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="نمایش شمارشگر فریم (FPS Counter)"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="نمایش زنده تعداد فریم بر ثانیه در گوشه صفحه"
+                            android:textColor="#78909C"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_fps_counter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#262A38" />
+
+                <!-- Fast Connect Toggle -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="اتصال سریع (Fast Connect)"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="تلاش مداوم و سریع‌تر برای ورود به سرورهای شلوغ"
+                            android:textColor="#78909C"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_fast_connect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- ============================================== -->
+            <!-- SECTION 3: CHAT WINDOW SETTINGS                -->
+            <!-- ============================================== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="پنجره چت (Chat Window)"
+                android:textColor="#FFA000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/settings_card_bg"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <!-- Chat Font Size -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_chat_font_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="اندازه قلم چت: 20pt"
+                        android:textColor="#ECEFF1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="(14 - 36)"
+                        android:textColor="#78909C"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekbar_chat_font"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:max="22"
+                    android:progress="6" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#262A38" />
+
+                <!-- Chat Box Width -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_chat_width_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="عرض کادر چت: 45%"
+                        android:textColor="#ECEFF1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="(30% - 70%)"
+                        android:textColor="#78909C"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekbar_chat_width"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:max="40"
+                    android:progress="15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#262A38" />
+
+                <!-- Chat Lines Count -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_chat_lines_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="تعداد خطوط چت: 7 خط"
+                        android:textColor="#ECEFF1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="(4 - 15)"
+                        android:textColor="#78909C"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/seekbar_chat_lines"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:max="11"
+                    android:progress="3" />
+
+            </LinearLayout>
+
+
+            <!-- ============================================== -->
+            <!-- SECTION 4: VOICE &amp; AUDIO                       -->
+            <!-- ============================================== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="صدا و ارتباط (Audio &amp; Voice)"
+                android:textColor="#FFA000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/settings_card_bg"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="ویس‌چت صوتی (Voice Chat)"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="فعال‌سازی ارتباط صوتی آنلاین با سایر بازیکنان"
+                            android:textColor="#78909C"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_voice_chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- ============================================== -->
+            <!-- SECTION 5: ACTION BUTTONS                      -->
+            <!-- ============================================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_reset_settings"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/settings_pill_bg"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="بازنشانی پیش‌فرض"
+                    android:textColor="#B0BEC5"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btn_save_settings"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1.4"
+                    android:background="@drawable/glory_btn_primary_amber"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="ذخیره تنظیمات"
+                    android:textColor="#101014"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

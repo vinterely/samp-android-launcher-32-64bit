@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="#e60f141e" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logobg"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView android:textSize="@dimen/_10sdp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/textView17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_25sdp" android:text="نسخه جدید در دسترس است!
+برای دریافت و بروزرسانی دکمه زیر را لمس کنید"
+        android:fontFamily="@font/montserrat_semibold" app:layout_constraintEnd_toEndOf="@+id/imageView10" app:layout_constraintStart_toStartOf="@+id/imageView10" app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+    <Button android:textSize="@dimen/_13sdp" android:textColor="#ffffffff" android:id="@+id/button_update" android:background="@drawable/button_gradient_pushed" android:layout_width="@dimen/_230sdp" android:layout_height="@dimen/_50sdp" android:layout_marginTop="@dimen/_20sdp" android:text="نصب و بروزرسانی"
+        android:textAllCaps="false" android:fontFamily="@font/proxima_nova_semibold" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView17" />
+</androidx.constraintlayout.widget.ConstraintLayout>

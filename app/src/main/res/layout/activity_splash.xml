@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/bg_splash"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textSize="@dimen/_14sdp"
+        android:textColor="#ffffffff"
+        android:id="@id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="خوش آمدید"
+        android:textAllCaps="true"
+        android:fontFamily="@font/proxima_nova_semibold"
+        app:layout_constraintBottom_toTopOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/imageView"
+        android:layout_width="@dimen/_190sdp"
+        android:layout_height="@dimen/_190sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logobg" />
+    <TextView
+        android:textSize="@dimen/_10sdp"
+        android:textColor="#ff737c95"
+        android:id="@id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="در حال ورود به بازی..."
+        android:fontFamily="@font/proxima_nova_semibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

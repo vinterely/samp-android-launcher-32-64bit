@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/_40sdp" android:width="@dimen/_230sdp" android:viewportWidth="799.0" android:viewportHeight="146.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/ic_social_youtube_bg__0" android:pathData="M25,0L774,0A25,25 0,0 1,799 25L799,121A25,25 0,0 1,774 146L25,146A25,25 0,0 1,0 121L0,25A25,25 0,0 1,25 0z" />
+</vector>

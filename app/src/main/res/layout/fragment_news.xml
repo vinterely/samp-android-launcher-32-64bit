@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:background="@drawable/bg_splash" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/back2"
+        android:layout_width="85dp"
+        android:layout_height="83dp"
+        android:src="@drawable/close"
+
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707" />
+
+    <TextView android:textSize="@dimen/_14sdp" android:textColor="#ffffffff" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_70sdp" android:text="Новости" android:textAllCaps="true" android:fontFamily="@font/proxima_nova_semibold" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvNews" android:paddingBottom="@dimen/_100sdp" android:layout_width="@dimen/_250sdp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_20sdp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/textView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
